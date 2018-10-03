@@ -1,4 +1,4 @@
-package net.perfectdreams.DreamCoreBungee.utils
+package net.perfectdreams.dreamcorebungee.utils
 
 enum class SocketCode(val errorId: Int, val fancyName: String) {
 	// 6xx - SUCCESS / INFO

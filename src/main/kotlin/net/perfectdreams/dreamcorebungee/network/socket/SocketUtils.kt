@@ -4,7 +4,7 @@ import com.github.salomonbrys.kotson.jsonObject
 import com.github.salomonbrys.kotson.obj
 import com.github.salomonbrys.kotson.set
 import com.google.gson.JsonObject
-import net.perfectdreams.DreamCoreBungee.utils.SocketCode
+import net.perfectdreams.dreamcorebungee.utils.SocketCode
 import net.perfectdreams.dreamcorebungee.utils.DreamUtils.jsonParser
 import java.io.BufferedReader
 import java.io.InputStreamReader
