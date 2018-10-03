@@ -4,6 +4,7 @@ import com.github.salomonbrys.kotson.obj
 import com.google.gson.JsonObject
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import net.perfectdreams.dreamcorebungee.DreamCoreBungee
 import net.perfectdreams.dreamcorebungee.utils.DreamUtils
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -24,12 +25,11 @@ class SocketServer(val socketPort: Int) {
 						val jsonObject = DreamUtils.jsonParser.parse(reply).obj
 						val response = JsonObject()
 
-						// val event = SocketReceivedEvent(jsonObject, response)
-						// Bukkit.getPluginManager().callEvent(event)
+						val event = SocketReceivedEvent(jsonObject, response)
+						DreamCoreBungee.INSTANCE.proxy.pluginManager.callEvent(event)
 
 						val out = PrintWriter(socket.getOutputStream(), true)
-						out.println("\n")
-						// out.println(event.response.toString() + "\n")
+						out.println(event.response.toString() + "\n")
 						out.flush()
 						fromClient.close()
 					} finally {

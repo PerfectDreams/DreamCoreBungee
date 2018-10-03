@@ -8,6 +8,7 @@ enum class SocketCode(val errorId: Int, val fancyName: String) {
 	FORBIDDEN(701, "Forbidden"),
 	OFFLINE_PLAYER(702, "Offline Player"),
 	UNKNOWN_PLAYER(703, "Unknown Player"),
+	UNKNOWN_SERVER(704, "Unknown Server"),
 	INVALID_NUMBER(710, "Invalid Number"),
 	INSUFFICIENT_FUNDS(711, "Insufficient Funds"),
 	ITEM_NOT_FOUND(712, "Item not found"),

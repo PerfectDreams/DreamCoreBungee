@@ -3,6 +3,7 @@ package net.perfectdreams.dreamcorebungee
 import net.md_5.bungee.api.plugin.Plugin
 import net.md_5.bungee.config.ConfigurationProvider
 import net.md_5.bungee.config.YamlConfiguration
+import net.perfectdreams.dreamcorebungee.listeners.SocketListener
 import net.perfectdreams.dreamcorebungee.network.socket.SocketServer
 import net.perfectdreams.dreamcorebungee.utils.DreamConfig
 import java.io.File
@@ -42,6 +43,7 @@ class DreamCoreBungee : Plugin() {
 
 		if (dreamConfig.socketPort != -1) {
 			thread { SocketServer(dreamConfig.socketPort).start() }
+			this.proxy.pluginManager.registerListener(this, SocketListener())
 		}
 	}
 
