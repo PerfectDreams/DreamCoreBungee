@@ -21,7 +21,7 @@ class DreamCoreBungee : Plugin() {
 
 		dataFolder.mkdirs()
 
-		val config = YamlConfiguration.getProvider(ConfigurationProvider::class.java).load(File(dataFolder, "config.yml"))
+		val config = ConfigurationProvider.getProvider(YamlConfiguration::class.java).load(File(dataFolder, "config.yml"))
 
 		// Carregar configuração
 		dreamConfig = DreamConfig(config.getString("server-name"), config.getString("bungee-name")).apply {
