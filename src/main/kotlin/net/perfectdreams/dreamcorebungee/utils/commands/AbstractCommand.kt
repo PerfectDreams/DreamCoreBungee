@@ -129,7 +129,7 @@ open class AbstractCommand(
 			return true
 		}
 
-		fun getContextualArgumentList(method: Method, sender: CommandSender, arguments: MutableList<String>): List<Any?> {
+		fun getContextualArgumentList(method: Method, sender: CommandSender, commandLabel: String, arguments: MutableList<String>): List<Any?> {
 			var dynamicArgIdx = 0
 			val params = mutableListOf<Any?>()
 
@@ -137,13 +137,30 @@ open class AbstractCommand(
 				val typeName = param.type.simpleName.toLowerCase()
 				val injectArgumentAnnotation = param.getAnnotation(InjectArgument::class.java)
 				when {
+					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.COMMAND_LABEL -> {
+						params.add(commandLabel)
+					}
+					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.PLAYER_EXACT -> {
+						val argument = arguments.getOrNull(dynamicArgIdx)
+						dynamicArgIdx++
+						if (argument != null) {
+							val player = Bukkit.getPlayerExact(argument)
+							params.add(player)
+						}
+					}
 					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.PLAYER -> {
 						val argument = arguments.getOrNull(dynamicArgIdx)
 						dynamicArgIdx++
-						if (argument == null) {
-							params.add(null)
-						} else {
-							val player = DreamCoreBungee.INSTANCE.proxy.getPlayer(argument)
+						if (argument != null) {
+							val player = Bukkit.getPlayer(argument)
+							params.add(player)
+						}
+					}
+					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.WORLD -> {
+						val argument = arguments.getOrNull(dynamicArgIdx)
+						dynamicArgIdx++
+						if (argument != null) {
+							val player = Bukkit.getWorld(argument)
 							params.add(player)
 						}
 					}
@@ -169,12 +186,14 @@ open class AbstractCommand(
 						}
 					}
 					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.ARGUMENT_LIST -> {
-						val duplicated = arguments.toMutableList()
-						for (idx in 0 until dynamicArgIdx) {
-							duplicated.removeAt(0)
+						if (arguments.isNotEmpty()) {
+							val duplicated = arguments.toMutableList()
+							for (idx in 0 until dynamicArgIdx) {
+								duplicated.removeAt(0)
+							}
+							if (duplicated.isNotEmpty())
+								params.add(duplicated.joinToString(" "))
 						}
-						if (duplicated.isNotEmpty())
-							params.add(duplicated.joinToString(" "))
 					}
 					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.ALL_ARGUMENTS_LIST -> {
 						params.add(arguments.joinToString(" "))
@@ -188,13 +207,13 @@ open class AbstractCommand(
 							params.add(value)
 						}
 					}
-					param.type.isAssignableFrom(ProxiedPlayer::class.java) && sender is ProxiedPlayer -> { params.add(sender) }
+					param.type.isAssignableFrom(Player::class.java) && sender is Player -> { params.add(sender) }
 					param.type.isAssignableFrom(CommandSender::class.java) && sender is CommandSender -> { params.add(sender) }
 					param.type.isAssignableFrom(String::class.java) -> {
 						params.add(arguments.getOrNull(dynamicArgIdx))
 						dynamicArgIdx++
 					}
-					// Sim, é necessário usar os nomes assim, já que podem ser tipos primitivos ou objetos
+				// Sim, é necessário usar os nomes assim, já que podem ser tipos primitivos ou objetos
 					typeName == "int" || typeName == "integer" -> {
 						params.add(arguments.getOrNull(dynamicArgIdx)?.toIntOrNull())
 						dynamicArgIdx++
