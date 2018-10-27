@@ -9,6 +9,7 @@ import net.perfectdreams.dreamcorebungee.DreamCoreBungee
 import net.perfectdreams.dreamcorebungee.utils.commands.annotation.ArgumentType
 import net.perfectdreams.dreamcorebungee.utils.commands.annotation.InjectArgument
 import net.perfectdreams.dreamcorebungee.utils.commands.annotation.SubcommandPermission
+import net.perfectdreams.dreamcorebungee.utils.extensions.toTextComponent
 import java.lang.reflect.AnnotatedElement
 import java.lang.reflect.InvocationTargetException
 import java.lang.reflect.Method
@@ -42,7 +43,7 @@ open class AbstractCommand(
 					abstractCommand.withoutPermissionCallback.invoke(sender, args)
 					return
 				}
-				sender.sendMessage(abstractCommand.withoutPermission ?: DreamCoreBungee.dreamConfig.withoutPermission)
+				sender.sendMessage(abstractCommand.withoutPermission?.toTextComponent() ?: DreamCoreBungee.dreamConfig.withoutPermission?.toTextComponent())
 				return
 			}
 
@@ -61,7 +62,7 @@ open class AbstractCommand(
 					}
 					val matched = matchedCount == value.size
 					if (matched) {
-						if (executeMethod(baseClass, method, sender, args,matchedCount))
+						if (executeMethod(baseClass, method, sender, args, matchedCount))
 							return
 					}
 				}
@@ -91,7 +92,7 @@ open class AbstractCommand(
 
 			// Agora iremos "validar" o argument list antes de executar
 			for ((index, parameter) in method.kotlinFunction!!.valueParameters.withIndex()) {
-				if (!parameter.type.isMarkedNullable && params[index] == null)
+				if (!parameter.type.isMarkedNullable && params.getOrNull(index) == null)
 					return false
 			}
 
@@ -103,7 +104,7 @@ open class AbstractCommand(
 			} catch (e: InvocationTargetException) {
 				val targetException = e.targetException
 				if (targetException is ExecutedCommandException) {
-					sender.sendMessage(targetException.minecraftMessage ?: e.message ?: "§cAlgo de errado aconteceu ao usar o comando...")
+					sender.sendMessage(targetException.minecraftMessage?.toTextComponent() ?: e.message?.toTextComponent() ?: "§cAlgo de errado aconteceu ao usar o comando...".toTextComponent())
 				} else {
 					throw e
 				}
@@ -123,13 +124,13 @@ open class AbstractCommand(
 					return false
 				}
 				val message = permissionAnnotation.message.replace("{UseDefaultMessage}", DreamCoreBungee.dreamConfig.withoutPermission)
-				sender.sendMessage(message)
+				sender.sendMessage(message.toTextComponent())
 				return false
 			}
 			return true
 		}
 
-		fun getContextualArgumentList(method: Method, sender: CommandSender, commandLabel: String, arguments: MutableList<String>): List<Any?> {
+		fun getContextualArgumentList(method: Method, sender: CommandSender, arguments: MutableList<String>): List<Any?> {
 			var dynamicArgIdx = 0
 			val params = mutableListOf<Any?>()
 
@@ -137,30 +138,11 @@ open class AbstractCommand(
 				val typeName = param.type.simpleName.toLowerCase()
 				val injectArgumentAnnotation = param.getAnnotation(InjectArgument::class.java)
 				when {
-					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.COMMAND_LABEL -> {
-						params.add(commandLabel)
-					}
-					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.PLAYER_EXACT -> {
-						val argument = arguments.getOrNull(dynamicArgIdx)
-						dynamicArgIdx++
-						if (argument != null) {
-							val player = Bukkit.getPlayerExact(argument)
-							params.add(player)
-						}
-					}
 					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.PLAYER -> {
 						val argument = arguments.getOrNull(dynamicArgIdx)
 						dynamicArgIdx++
 						if (argument != null) {
-							val player = Bukkit.getPlayer(argument)
-							params.add(player)
-						}
-					}
-					injectArgumentAnnotation != null && injectArgumentAnnotation.type == ArgumentType.WORLD -> {
-						val argument = arguments.getOrNull(dynamicArgIdx)
-						dynamicArgIdx++
-						if (argument != null) {
-							val player = Bukkit.getWorld(argument)
+							val player = DreamCoreBungee.INSTANCE.proxy.getPlayer(argument)
 							params.add(player)
 						}
 					}
@@ -207,13 +189,13 @@ open class AbstractCommand(
 							params.add(value)
 						}
 					}
-					param.type.isAssignableFrom(Player::class.java) && sender is Player -> { params.add(sender) }
+					param.type.isAssignableFrom(ProxiedPlayer::class.java) && sender is ProxiedPlayer -> { params.add(sender) }
 					param.type.isAssignableFrom(CommandSender::class.java) && sender is CommandSender -> { params.add(sender) }
 					param.type.isAssignableFrom(String::class.java) -> {
 						params.add(arguments.getOrNull(dynamicArgIdx))
 						dynamicArgIdx++
 					}
-				// Sim, é necessário usar os nomes assim, já que podem ser tipos primitivos ou objetos
+					// Sim, é necessário usar os nomes assim, já que podem ser tipos primitivos ou objetos
 					typeName == "int" || typeName == "integer" -> {
 						params.add(arguments.getOrNull(dynamicArgIdx)?.toIntOrNull())
 						dynamicArgIdx++
