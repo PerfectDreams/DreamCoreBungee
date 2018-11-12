@@ -78,7 +78,7 @@
         <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
-            <version>2.7.8</version>
+            <version>3.2.0</version>
         </dependency>
         <dependency>
             <groupId>org.postgresql</groupId>
@@ -88,7 +88,7 @@
         <dependency>
             <groupId>org.jetbrains.exposed</groupId>
             <artifactId>exposed</artifactId>
-            <version>0.10.5</version>
+            <version>0.11.2</version>
         </dependency>
         <dependency>
             <groupId>com.okkero.skedule</groupId>
