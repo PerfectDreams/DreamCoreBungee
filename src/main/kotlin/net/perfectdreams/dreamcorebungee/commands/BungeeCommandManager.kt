@@ -1,20 +1,22 @@
 package net.perfectdreams.dreamcorebungee.commands
 
 import net.md_5.bungee.api.CommandSender
-import net.md_5.bungee.api.plugin.Command
 import net.md_5.bungee.api.plugin.Plugin
 import net.perfectdreams.commands.manager.DispatchableCommandManager
-import java.util.HashMap
 
 class BungeeCommandManager(val plugin: Plugin) : DispatchableCommandManager<CommandSender, SparklyBungeeCommand, SparklyBungeeDSLCommand>() {
 
     val commands = mutableListOf<SparklyBungeeCommand>()
 
     override fun registerCommand(command: SparklyBungeeCommand) {
+        plugin.proxy.pluginManager.registerCommand(plugin, BungeeCommandWrapper(this, command))
+
         commands.add(command)
     }
 
     override fun unregisterCommand(command: SparklyBungeeCommand) {
+        // plugin.proxy.pluginManager.unregisterCommand(BungeeCommandWrapper(this, command))
+
         commands.remove(command)
     }
 
