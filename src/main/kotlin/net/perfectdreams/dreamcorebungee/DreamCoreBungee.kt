@@ -3,6 +3,8 @@ package net.perfectdreams.dreamcorebungee
 import net.md_5.bungee.api.plugin.Plugin
 import net.md_5.bungee.config.ConfigurationProvider
 import net.md_5.bungee.config.YamlConfiguration
+import net.perfectdreams.dreamcorebungee.commands.BungeeCommandManager
+import net.perfectdreams.dreamcorebungee.commands.DreamCoreBungeeCommand
 import net.perfectdreams.dreamcorebungee.listeners.SocketListener
 import net.perfectdreams.dreamcorebungee.network.socket.SocketServer
 import net.perfectdreams.dreamcorebungee.utils.DreamConfig
@@ -14,6 +16,8 @@ class DreamCoreBungee : Plugin() {
 		lateinit var dreamConfig: DreamConfig
 		lateinit var INSTANCE: DreamCoreBungee
 	}
+
+	lateinit var commandManager: BungeeCommandManager
 
 	override fun onEnable() {
 		super.onEnable()
@@ -45,6 +49,10 @@ class DreamCoreBungee : Plugin() {
 			thread { SocketServer(dreamConfig.socketPort).start() }
 			this.proxy.pluginManager.registerListener(this, SocketListener())
 		}
+
+		commandManager = BungeeCommandManager(this)
+
+		commandManager.registerCommand(DreamCoreBungeeCommand())
 	}
 
 	override fun onDisable() {
