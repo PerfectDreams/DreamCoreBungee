@@ -3,7 +3,7 @@ package net.perfectdreams.dreamcorebungee
 import net.md_5.bungee.api.plugin.Plugin
 import net.perfectdreams.dreamcorebungee.commands.SparklyBungeeCommand
 
-class KotlinPlugin : Plugin() {
+abstract class KotlinPlugin : Plugin() {
 
     val commandManager = DreamCoreBungee.INSTANCE.commandManager
 
