@@ -2,9 +2,24 @@ package net.perfectdreams.dreamcorebungee.commands
 
 import net.md_5.bungee.api.CommandSender
 import net.md_5.bungee.api.plugin.Plugin
+import net.perfectdreams.commands.manager.CommandContinuationType
 import net.perfectdreams.commands.manager.DispatchableCommandManager
+import net.perfectdreams.dreamcorebungee.DreamCoreBungee
+import net.perfectdreams.dreamcorebungee.utils.extensions.toTextComponent
 
 class BungeeCommandManager(val plugin: Plugin) : DispatchableCommandManager<CommandSender, SparklyBungeeCommand, SparklyBungeeDSLCommand>() {
+
+    init {
+        commandListeners.addCommandListener { commandSender, sparklyCommand ->
+            // Permissões
+            if (sparklyCommand.permission != null && !commandSender.hasPermission(sparklyCommand.permission)) {
+                commandSender.sendMessage(DreamCoreBungee.dreamConfig.withoutPermission.toTextComponent())
+                CommandContinuationType.CANCEL
+            } else {
+                CommandContinuationType.CONTINUE
+            }
+        }
+    }
 
     val commands = mutableListOf<SparklyBungeeCommand>()
 
