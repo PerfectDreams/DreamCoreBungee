@@ -153,8 +153,8 @@
         </dependency>
         <dependency>
             <groupId>com.github.ProtocolSupport</groupId>
-            <artifactId>ProtocolSupport</artifactId>
-            <version>73866ea</version>
+            <artifactId>ProtocolSupportBungee</artifactId>
+            <version>6718e7d</version>
         </dependency>
     </dependencies>
 
