@@ -1,0 +1,148 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------< [0;36mnet.perfectdreams.dreamcorebungee:DreamCoreBungee[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding DreamCoreBungee 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-api/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-api/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-parent/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-parent/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-parent:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-super/dev-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-super/dev-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-super:dev-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-chat/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-chat/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-config/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-config/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-event/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-event/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-protocol/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-protocol/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/net/md-5/brigadier/1.0.16-SNAPSHOT/maven-metadata.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.8:tree[m [1m(default-cli)[m @ [36mDreamCoreBungee[0;1m ---[m
+[[1;34mINFO[m] net.perfectdreams.dreamcorebungee:DreamCoreBungee:jar:1.0-SNAPSHOT
+[[1;34mINFO[m] +- io.github.waterfallmc:waterfall-api:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-chat:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-config:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  \- org.yaml:snakeyaml:jar:1.23:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-event:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-protocol:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  +- net.md-5:brigadier:jar:1.0.16-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  +- io.netty:netty-codec:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |  \- io.netty:netty-transport:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     +- io.netty:netty-buffer:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     |  \- io.netty:netty-common:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     \- io.netty:netty-resolver:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  \- net.sf.trove4j:core:jar:3.1.0:provided
+[[1;34mINFO[m] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[[1;34mINFO[m] |  \- com.google.guava:guava:jar:20.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.0:provided
+[[1;34mINFO[m] |  +- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.0:compile
+[[1;34mINFO[m] |  \- org.jetbrains:annotations:jar:13.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlin:kotlin-reflect:jar:1.3.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.0.0:provided
+[[1;34mINFO[m] |  \- org.jetbrains.kotlinx:kotlinx-coroutines-core-common:jar:1.0.0:provided
+[[1;34mINFO[m] +- com.zaxxer:HikariCP:jar:3.2.0:compile
+[[1;34mINFO[m] +- org.postgresql:postgresql:jar:42.2.5:compile
+[[1;34mINFO[m] +- org.jetbrains.exposed:exposed:jar:0.11.2:compile
+[[1;34mINFO[m] |  \- joda-time:joda-time:jar:2.9.9:compile
+[[1;34mINFO[m] +- com.okkero.skedule:skedule:jar:1.2.3:compile
+[[1;34mINFO[m] +- com.github.kevinsawicki:http-request:jar:6.0:compile
+[[1;34mINFO[m] +- com.github.salomonbrys.kotson:kotson:jar:2.5.0:compile
+[[1;34mINFO[m] |  \- com.google.code.gson:gson:jar:2.8.0:compile
+[[1;34mINFO[m] +- org.mongodb:mongo-java-driver:jar:3.8.0:compile
+[[1;34mINFO[m] \- net.perfectdreams.commands:command-framework-core:jar:0.0.4:compile
+[[1;34mINFO[m]    \- io.github.microutils:kotlin-logging:jar:1.6.22:compile
+[[1;34mINFO[m]       \- io.github.microutils:kotlin-logging-common:jar:1.6.22:compile
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 6.760 s
+[[1;34mINFO[m] Finished at: 2019-01-23T17:55:22-02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m---------< [0;36mnet.perfectdreams.dreamcorebungee:DreamCoreBungee[0;1m >----------[m
+[[1;34mINFO[m] [1mBuilding DreamCoreBungee 1.0-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-api/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-api/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-api:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-parent/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-parent/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-parent:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-super/dev-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-super/dev-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-super:dev-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-chat/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-chat/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-chat:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-config/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-config/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-config:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-event/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-event/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-event:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from jitpack.io: https://jitpack.io/io/github/waterfallmc/waterfall-protocol/1.13-SNAPSHOT/maven-metadata.xml
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/io/github/waterfallmc/waterfall-protocol/1.13-SNAPSHOT/maven-metadata.xml
+[[1;33mWARNING[m] Could not transfer metadata io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+[[1;33mWARNING[m] Failure to transfer io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from https://jitpack.io was cached in the local repository, resolution will not be reattempted until the update interval of jitpack.io has elapsed or updates are forced. Original error: Could not transfer metadata io.github.waterfallmc:waterfall-protocol:1.13-SNAPSHOT/maven-metadata.xml from/to jitpack.io (https://jitpack.io): Not authorized , ReasonPhrase:Unauthorized.
+Downloading from perfectdreams-repo: https://repo.perfectdreams.net/net/md-5/brigadier/1.0.16-SNAPSHOT/maven-metadata.xml
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-dependency-plugin:2.8:tree[m [1m(default-cli)[m @ [36mDreamCoreBungee[0;1m ---[m
+[[1;34mINFO[m] net.perfectdreams.dreamcorebungee:DreamCoreBungee:jar:1.0-SNAPSHOT
+[[1;34mINFO[m] +- io.github.waterfallmc:waterfall-api:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-chat:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-config:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  \- org.yaml:snakeyaml:jar:1.23:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-event:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  +- io.github.waterfallmc:waterfall-protocol:jar:1.13-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  +- net.md-5:brigadier:jar:1.0.16-SNAPSHOT:provided
+[[1;34mINFO[m] |  |  +- io.netty:netty-codec:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |  \- io.netty:netty-transport:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     +- io.netty:netty-buffer:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     |  \- io.netty:netty-common:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  |     \- io.netty:netty-resolver:jar:4.1.32.Final:provided
+[[1;34mINFO[m] |  |  \- net.sf.trove4j:core:jar:3.1.0:provided
+[[1;34mINFO[m] |  +- org.slf4j:slf4j-api:jar:1.7.25:compile
+[[1;34mINFO[m] |  \- com.google.guava:guava:jar:20.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlin:kotlin-stdlib:jar:1.3.0:provided
+[[1;34mINFO[m] |  +- org.jetbrains.kotlin:kotlin-stdlib-common:jar:1.3.0:compile
+[[1;34mINFO[m] |  \- org.jetbrains:annotations:jar:13.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlin:kotlin-reflect:jar:1.3.0:provided
+[[1;34mINFO[m] +- org.jetbrains.kotlinx:kotlinx-coroutines-core:jar:1.0.0:provided
+[[1;34mINFO[m] |  \- org.jetbrains.kotlinx:kotlinx-coroutines-core-common:jar:1.0.0:provided
+[[1;34mINFO[m] +- com.zaxxer:HikariCP:jar:3.2.0:compile
+[[1;34mINFO[m] +- org.postgresql:postgresql:jar:42.2.5:compile
+[[1;34mINFO[m] +- org.jetbrains.exposed:exposed:jar:0.11.2:compile
+[[1;34mINFO[m] |  \- joda-time:joda-time:jar:2.9.9:compile
+[[1;34mINFO[m] +- com.okkero.skedule:skedule:jar:1.2.3:compile
+[[1;34mINFO[m] +- com.github.kevinsawicki:http-request:jar:6.0:compile
+[[1;34mINFO[m] +- com.github.salomonbrys.kotson:kotson:jar:2.5.0:compile
+[[1;34mINFO[m] |  \- com.google.code.gson:gson:jar:2.8.0:compile
+[[1;34mINFO[m] +- org.mongodb:mongo-java-driver:jar:3.8.0:compile
+[[1;34mINFO[m] \- net.perfectdreams.commands:command-framework-core:jar:0.0.4:compile
+[[1;34mINFO[m]    \- io.github.microutils:kotlin-logging:jar:1.6.22:compile
+[[1;34mINFO[m]       \- io.github.microutils:kotlin-logging-common:jar:1.6.22:compile
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time: 6.936 s
+[[1;34mINFO[m] Finished at: 2019-01-23T17:55:47-02:00
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
