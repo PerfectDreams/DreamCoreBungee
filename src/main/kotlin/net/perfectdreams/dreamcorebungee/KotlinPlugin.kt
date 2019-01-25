@@ -5,7 +5,7 @@ import net.perfectdreams.dreamcorebungee.commands.SparklyBungeeCommand
 
 abstract class KotlinPlugin : Plugin() {
 
-    val commandManager = DreamCoreBungee.INSTANCE.commandManager
+    val commandManager = DreamCoreBungee.commandManager
 
     fun registerCommand(cmd: SparklyBungeeCommand) {
         commandManager.registerCommand(cmd)
