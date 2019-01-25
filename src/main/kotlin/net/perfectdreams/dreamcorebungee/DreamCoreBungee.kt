@@ -15,9 +15,9 @@ class DreamCoreBungee : Plugin() {
 	companion object {
 		lateinit var dreamConfig: DreamConfig
 		lateinit var INSTANCE: DreamCoreBungee
-	}
 
-	lateinit var commandManager: BungeeCommandManager
+		lateinit var commandManager: BungeeCommandManager
+	}
 
 	override fun onEnable() {
 		super.onEnable()
