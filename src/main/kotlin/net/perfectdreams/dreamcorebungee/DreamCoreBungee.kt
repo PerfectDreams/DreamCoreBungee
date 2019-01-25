@@ -15,8 +15,6 @@ class DreamCoreBungee : Plugin() {
 	companion object {
 		lateinit var dreamConfig: DreamConfig
 		lateinit var INSTANCE: DreamCoreBungee
-
-		lateinit var commandManager: BungeeCommandManager
 	}
 
 	override fun onEnable() {
@@ -50,7 +48,7 @@ class DreamCoreBungee : Plugin() {
 			this.proxy.pluginManager.registerListener(this, SocketListener())
 		}
 
-		commandManager = BungeeCommandManager(this)
+		val commandManager = BungeeCommandManager(this)
 
 		commandManager.registerCommand(DreamCoreBungeeCommand())
 	}
