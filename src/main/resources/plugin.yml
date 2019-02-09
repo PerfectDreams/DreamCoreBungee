@@ -1,4 +1,5 @@
 name: DreamCoreBungee
 main: net.perfectdreams.dreamcorebungee.DreamCoreBungee
 version: 1.0.0
-softdepend: ["KotlinRuntime"]
+softDepends:
+  - KotlinRuntime
