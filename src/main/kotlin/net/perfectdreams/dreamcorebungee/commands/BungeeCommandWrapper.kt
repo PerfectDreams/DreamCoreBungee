@@ -5,7 +5,7 @@ import net.md_5.bungee.api.plugin.Command
 
 class BungeeCommandWrapper(val commandManager: BungeeCommandManager, val sparklyCommand: SparklyBungeeCommand) : Command(
         sparklyCommand.labels.first(), // Label
-        "", // Description (nobody cares)
+        sparklyCommand.permission,
         *sparklyCommand.labels.drop(1).toTypedArray()
 ) {
 
