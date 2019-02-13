@@ -5,9 +5,14 @@ import net.md_5.bungee.config.ConfigurationProvider
 import net.md_5.bungee.config.YamlConfiguration
 import net.perfectdreams.dreamcorebungee.commands.BungeeCommandManager
 import net.perfectdreams.dreamcorebungee.commands.DreamCoreBungeeCommand
+import net.perfectdreams.dreamcorebungee.listeners.PlayerListener
 import net.perfectdreams.dreamcorebungee.listeners.SocketListener
 import net.perfectdreams.dreamcorebungee.network.socket.SocketServer
+import net.perfectdreams.dreamcorebungee.tables.Users
+import net.perfectdreams.dreamcorebungee.utils.Databases
 import net.perfectdreams.dreamcorebungee.utils.DreamConfig
+import org.jetbrains.exposed.sql.SchemaUtils
+import org.jetbrains.exposed.sql.transactions.transaction
 import java.io.File
 import kotlin.concurrent.thread
 
@@ -43,10 +48,18 @@ class DreamCoreBungee : Plugin() {
 			this.socketPort = config.getInt("socket-port", -1)
 		}
 
+		transaction(Databases.databaseNetwork) {
+			SchemaUtils.createMissingTablesAndColumns(
+					Users
+			)
+		}
+
 		if (dreamConfig.socketPort != -1) {
 			thread { SocketServer(dreamConfig.socketPort).start() }
 			this.proxy.pluginManager.registerListener(this, SocketListener())
 		}
+
+		this.proxy.pluginManager.registerListener(this, PlayerListener(this))
 
 		val commandManager = BungeeCommandManager(this)
 
